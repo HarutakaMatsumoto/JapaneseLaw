@@ -99,5 +99,52 @@ class 内閣 {
     func 最高裁判所裁判官の指名() {}
 }
 
+class 国民 {
+    let 正義と秩序を基調とする国際平和を誠実に希求する = true
+    var 戦力: [戦力] {
+        get {
+            []
+        }
+        set {
+        }
+    }
+    
+    func 国権の発動たる戦争(手段: 戦争.手段) throws {
+        switch 手段 {
+        case .国際紛争を解決する:
+            throw CancellationError()
+        }
+    }
+    
+    final func 武力の行使(手段: 戦争.手段) throws {
+        switch 手段 {
+        case .国際紛争を解決する:
+            throw CancellationError()
+        }
+    }
+    
+    func 交戦権を認める() -> Bool {
+        false
+    }
+}
+
+class 戦争 {
+    enum 手段 {
+        case 国際紛争を解決する
+    }
+}
+
+class 戦力 {
+}
+
+class 陸軍: 戦力 {
+}
+
+class 海軍: 戦力 {
+}
+
+class 空軍: 戦力 {
+}
+
 class 財産 {
 }
